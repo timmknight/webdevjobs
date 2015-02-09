@@ -1,0 +1,30 @@
+
+<!-- <input type="submit" class="btn btn-primary" value="Add"> -->
+
+<!-- <form ng-submit="postJob(job)">
+  <input type="text" ng-model="job.title" placeholder="Job Title">
+  <input type="text" ng-model="job.description" placeholder="Post Description">
+  <input type="text" ng-model="job.skills" placeholder="Post Skills">
+  <input type="submit" value="Job" class="btn btn-warning">
+</form>
+ -->
+<!--  <div class="jobContainer col-sm-4 col-md-3" >
+   <input type="text" class="form-control" ng-model="query" placeholder="Search">
+ </div> -->
+
+<div ng-repeat="job in jobs | filter:query" class="jobContainer jumbotron col-sm-4 col-md-3" >
+
+   <a ng-href="#/job/{{job.$id}}">
+      <h4 class="jobTitle">{{job.title}}</h4>
+   </a>
+      <p>{{job.description}}</p>
+</div>
+
+
+ 
+
+  <!-- anything typed in here is magically saved to Firebase! -->
+  <!-- Post New Job -->
+<!--     <input type="text" ng-model="job.text"/> -->
+    <!-- all changes from Firebase magically appear here! -->
+    <!-- <h1>Title: {{ job.title }}</h1>

@@ -1,0 +1,16 @@
+<div>
+	<form ng-submit="updateJob(selectedJob)">
+	  <input type="text" ng-model="selectedJob.title" placeholder="Job Title"></br>
+	  <textarea type="text" ng-model="selectedJob.description" placeholder="Job Description"></textarea></br>
+	<!--   <input type="text" ng-model="job.skills" placeholder="Post Skills"></br> -->
+	  <input type="submit" value="Update Job" class="btn btn-info">
+	</form>
+
+	<form ng-submit="deleteJob(selectedJob)">
+		<input type="submit" value="Delete Job" class="btn btn-info">
+	</form>
+</div>
+<h3>Title</h3></br>
+	{{selectedJob.title}}
+<h3>Description</h3></br>
+	{{selectedJob.description}}

@@ -1,0 +1,21 @@
+<div class="modal fade" id="regModal" ng-controller="AuthController"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Register</h4>
+      </div>
+      <div class="modal-body">
+        <form ng-submit="register(user)">
+		<input type="name" ng-model="user.name" placeholder="Name" class="form-control" required><br>
+		<input type="email" ng-model="user.email" placeholder="Email" class="form-control" required><br>
+		<input type="password" ng-model="user.password" placeholder="Password" class="form-control" required><br>
+
+		<!-- <input type="submit" vaule="Update Password" class="btn btn-info"> -->
+<!-- 		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <button type="submit" vaule="Update Password" class="btn btn-primary">Register</button>
+        </form>
+        </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
