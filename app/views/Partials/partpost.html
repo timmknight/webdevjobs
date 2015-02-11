@@ -1,0 +1,29 @@
+<div class="modal fade" id="postModal"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Post Job</h3>
+      </div>
+      <div class="modal-body">
+       <form ng-submit="postJob()">
+          <input type="text" ng-model="selectedJob.title" class="title" placeholder="Job Title"></br>
+          <textarea type="text" ng-model="selectedJob.description" placeholder="Job Description"></textarea></br>
+          <input type="text" ng-model="selectedJob.location" placeholder="Location">
+          <select ng-model="selectedJob.salary" >
+            <option value="0-18k">0-18,000</option>
+            <option value="18-25k">18,000-25,000</option>
+            <option value="25-30k">25,000-30,000</option>
+            <option value="30-40k">30,000-40,000</option>
+            <option value="40-60k">40,000-60,000</option>
+            <option value="60k+">60,000+</option>
+          </select>
+          <input type="submit" value="Post Job" class="btn btn-info">
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+        <!--   <input type="text" ng-model="job.skills" placeholder="Post Skills"></br> -->

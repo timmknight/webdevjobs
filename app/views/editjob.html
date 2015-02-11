@@ -1,0 +1,36 @@
+
+<div class="col-sm-12 jobdiv">
+	
+	  <input type="text" ng-model="selectedJob.title" placeholder="Job Title" class="title"></br>
+	  <textarea type="text" ng-model="selectedJob.description" placeholder="Job Description"></textarea></br>
+	  <input type="text" ng-model="selectedJob.location" placeholder="Location">
+	  <select ng-model="selectedJob.salary" >
+	  	<option value="0-18k">0-18,000</option>
+	  	<option value="18-25k">18,000-25,000</option>
+	  	<option value="25-30k">25,000-30,000</option>
+	  	<option value="30-40k">30,000-40,000</option>
+	  	<option value="40-60k">40,000-60,000</option>
+	  	<option value="60k+">60,000+</option>
+	  </select><br>
+	
+	<div>
+	<p>
+	<form ng-submit="updateJob(selectedJob)" class="button">
+	  <input type="submit" value="Update Job" class="btn btn-info">
+	</form>
+
+	<form ng-submit="deleteJob(selectedJob)" class="button">
+		<input  type="submit" value="Delete Job" class="btn btn-info">
+	</form>
+	</p>
+	</div>
+	<div class="jobpreview">
+		<h3>Title</h3></br>
+		<p>{{selectedJob.title}}</p>
+		<h3>Description</h3></br>
+		<p>{{selectedJob.description}}
+		{{selectedJob.location}}
+		{{selectedJob.salary}}</p>
+	</div>
+</div>
+
