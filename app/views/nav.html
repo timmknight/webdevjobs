@@ -1,0 +1,55 @@
+<!-- 
+<div class="header"  ng-controller="NavCtrl">
+
+  <toaster-container toaster-options="{'time-out': 1500, 'close-button': false}"></toaster-container>
+  <div class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/">Web Dev Jobs</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+ 
+        <li><a href="#/">Browse Jobs</a></li>
+        <li ng-show="signedIn()"><a href="" data-toggle="modal" data-target="#postModal">Post Job</a></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+      
+        <li ng-hide="signedIn()"><a href="" data-toggle="modal" data-target="#logModal">Login</a></li>
+        <li ng-hide="signedIn()"><a href="" data-toggle="modal" data-target="#regModal">Register</a></li>
+
+        <li ng-show="signedIn()" class="dropdown">
+
+        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" id="dropdowntext" data-toggle="dropdown"> {{currentUser.profile.name}} <b class="caret"></b></a>
+
+        <ul class="dropdown-menu">
+          <li ng-show="signedIn()"><a href="" data-toggle="modal" data-target="#pasModal">Profile</a></li>
+          <li ng-show="signedIn()"><a href="" data-toggle="modal" data-target="#pasModal">Change Password</a></li>
+       
+          <li class="divider"></li>
+          <li><a href="#" ng-click="logout()">Logout</a></li>
+        </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div ng-include="'views/partials/changepassword.html'"></div>
+  <div ng-include="'views/partials/register.html'"></div>
+  <div ng-include="'views/partials/login.html'"></div>
+  <div ng-include="'views/partials/post.html'"></div>
+  <div ng-include="'views/partials/edit.html'"></div>
+</div>
+
+
+
+
+
+
+
+          -->

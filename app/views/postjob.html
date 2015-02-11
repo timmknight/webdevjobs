@@ -1,13 +1,61 @@
-<div>
+<!-- <div>
 	<form ng-submit="postJob(job)">
 	  <input type="text" ng-model="job.title" placeholder="Job Title"></br>
-	  <textarea type="text" ng-model="job.description" placeholder="Job Description"></textarea></br>
+	  <textarea type="text" ng-model="job.description" placeholder="Job Description" ></textarea></br> -->
 	<!--   <input type="text" ng-model="job.skills" placeholder="Post Skills"></br> -->
-	  <input type="submit" value="Job" class="btn btn-warning">
+<!-- 	  <input type="submit" value="Job" class="btn btn-warning">
 	</form>
 </div>
 <h3>Title</h3></br>
 	{{job.title}}
 <h3>Description</h3></br>
-	{{job.description}}
+	{{job.description}} -->
 <!-- <p>Skills{{job.skills}}</p> -->
+
+<div class="col-sm-12 jobdiv">
+	<form ng-submit="postJob(job)">
+	  <input type="text" ng-model="selectedJob.title" class="title" placeholder="Job Title"></br>
+	  <textarea type="text" ng-model="selectedJob.description" placeholder="Job Description"></textarea></br>
+	  <input type="text" ng-model="selectedJob.location" placeholder="Location">
+	  <select ng-model="selectedJob.salary" >
+	  	<option value="0-18k">0-18,000</option>
+	  	<option value="18-25k">18,000-25,000</option>
+	  	<option value="25-30k">25,000-30,000</option>
+	  	<option value="30-40k">30,000-40,000</option>
+	  	<option value="40-60k">40,000-60,000</option>
+	  	<option value="60k+">60,000+</option>
+	  </select>
+	
+	
+	  <input type="submit" value="Post Job" class="btn btn-info">
+	</form>
+
+
+	<div class="jobpreview">
+		<h3>Title</h3></br>
+		<p>{{selectedJob.title}}</p>
+		<h3>Description</h3></br>
+		<p>{{selectedJob.description}}
+		{{selectedJob.location}}
+		{{selectedJob.salary}}</p>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- <div class="jobContainer jumbotron col-sm-6 col-md-6 col-lg-4" > -->
+
+  <!--  <a ng-href="#/job/{{job.$id}}"> -->
+    <!--   <h4 class="jobTitle">{{selectedJob.title | limitTo: 31}}{{job.title.length > 31 ? '...' : ''}}</h4>
+   </a>
+     <div>
+        <p>{{ selectedJob.description | limitTo: 400 }}{{selectedJob.description.length > 400 ? '...' : ''}}
+        <br>
+        Location: {{selectedJob.location}}
+        <br>
+        Salary: {{selectedJob.salary}}
+        </p>
+   </div> -->
