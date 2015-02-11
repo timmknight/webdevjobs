@@ -1,0 +1,35 @@
+<div class="modal fade" id="editModal" ng-controller="EditJobCtrl"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Edit Job</h4>
+      </div>
+      <div class="modal-body">
+        <input type="text" ng-model="selectedJob.title" placeholder="Job Title" class="title"></br>
+    <textarea type="text" ng-model="selectedJob.description" placeholder="Job Description"></textarea></br>
+    <input type="text" ng-model="selectedJob.location" placeholder="Location">
+    <select ng-model="selectedJob.salary" >
+      <option value="0-18k">0-18,000</option>
+      <option value="18-25k">18,000-25,000</option>
+      <option value="25-40k">25,000-40,000</option>
+      <option value="40-40k">40,000-40,000</option>
+      <option value="40-60k">40,000-60,000</option>
+      <option value="60k+">60,000+</option>
+    </select><br>
+  
+  <div>
+  <p>
+  <form ng-submit="updateJob(selectedJob)" class="button">
+    <input type="submit" value="Update Job" class="btn btn-info">
+  </form>
+
+  <form ng-submit="deleteJob(selectedJob)" class="button">
+    <input  type="submit" value="Delete Job" class="btn btn-info">
+  </form>
+  </p>
+  </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

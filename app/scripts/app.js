@@ -20,7 +20,7 @@ var app = angular.module('webdevjobsApp', [
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/browse.html',
         controller: 'MainCtrl'
       })
       // .when('#', {
@@ -44,7 +44,7 @@ var app = angular.module('webdevjobsApp', [
       //   controller: 'AuthController'
       // })
       .when('/job/:jobId', {
-        templateUrl: 'views/job.html',
+        templateUrl: 'views/editjob.html',
         controller: 'EditJobCtrl'
       })
       .otherwise({
