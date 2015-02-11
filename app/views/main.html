@@ -12,12 +12,22 @@
    <input type="text" class="form-control" ng-model="query" placeholder="Search">
  </div> -->
 
-<div ng-repeat="job in jobs | filter:query" class="jobContainer jumbotron col-sm-4 col-md-3" >
+<div ng-repeat="job in jobs | filter:query" class="jobContainer jumbotron col-sm-6 col-md-6 col-lg-4" >
 
    <a ng-href="#/job/{{job.$id}}">
-      <h4 class="jobTitle">{{job.title}}</h4>
+      <h4 class="jobTitle">{{job.title | limitTo: 31}}{{job.title.length > 31 ? '...' : ''}}</h4>
    </a>
-      <p>{{job.description}}</p>
+     <div>
+        <p>{{ job.description | limitTo: 400 }}{{job.description.length > 400 ? '...' : ''}}
+        <br>
+        Location: {{job.location}}
+        <br>
+        Salary: {{job.salary}}
+        <br>
+        <!-- <span am-time-ago="1421848368791"></span> -->
+        </p>
+        
+   </div>
 </div>
 
 

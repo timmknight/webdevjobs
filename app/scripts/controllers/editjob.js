@@ -37,4 +37,3 @@ app.controller('EditJobCtrl', function ($scope, FURL, $firebase, $location, $rou
 	};
 	  $scope.jobs = fbJobs;
 });
-
